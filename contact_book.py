@@ -18,7 +18,7 @@ class ContactBook:
         if match is not None:
             return f"Correct phone number: {self.phone_number}"
         else:
-            print(f"{ValueError}: Incorrect phone number: {self.phone_number}")
+            print(f"Incorrect phone number: {self.phone_number}")
             sys.exit(1)
 
     def describe_contact(self):
