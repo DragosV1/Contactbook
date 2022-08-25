@@ -33,7 +33,7 @@ def delete_contact():
 
 def show_contact_book():
     with open("contacts.txt", "r") as f:
-        print(f.read().replace("\n", " | "))
+        print(f.read().replace("\n", "| "))
 
 while True:
     user_input = input("\nAdd contact (A)\nSearch contact (S)\nDelete contact (D)\nQuit (Q)\nSee all contacts(R)\nType: ").upper()
