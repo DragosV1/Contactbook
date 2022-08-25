@@ -1,1 +1,4 @@
-_pycache_
+.venv
+__pycache__
+.txt
+.xlsx
