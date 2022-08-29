@@ -1,4 +1,3 @@
-from pprint import pprint
 from contact_book import ContactBook
 
 
@@ -33,10 +32,10 @@ def delete_contact():
 
 def show_contact_book():
     with open("contacts.txt", "r") as f:
-        print(f.read().replace("\n", "| "))
+        print(f.read().replace("\n", ""))
 
 while True:
-    user_input = input("\nAdd contact (A)\nSearch contact (S)\nDelete contact (D)\nQuit (Q)\nSee all contacts(R)\nType: ").upper()
+    user_input = input("\nAdd contact (A)\nSearch contact (S)\nDelete contact (D)\nSee all contacts(R)\nQuit (Q)\nType: ").upper()
     if user_input == "A":
         store_contact()
     elif user_input == "S":
