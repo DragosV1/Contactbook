@@ -2,17 +2,21 @@ from contact_book import ContactBook
 
 
 def store_contact():
-        contact = ContactBook(
-            name=input("Enter the name of the contact: "),
-            phone_number=input("Enter the phone number: "),
-            address=input("Enter the address: ")
-        )
+    """It will generate an txt file"""
 
-        print(contact.check_phone_number())
-        print(contact.describe_contact(), "\n")
+    contact = ContactBook(
+        name=input("Enter the name of the contact: "),
+        phone_number=input("Enter the phone number: "),
+        address=input("Enter the address: "),
+        email=input("Enter email: ")
+    )
 
-        with open("./contacts.txt", "a") as f:
-            f.writelines((contact.describe_contact(), "\n"))
+    print(contact.check_phone_number())
+    print(contact.check_email())
+    print(contact.describe_contact(), "\n")
+
+    with open("./contacts.txt", "a") as f:
+        f.writelines((contact.describe_contact(), "\n"))
 
 def search_contact():
     with open("contacts.txt", "r") as f:
@@ -32,7 +36,7 @@ def delete_contact():
 
 def show_contact_book():
     with open("contacts.txt", "r") as f:
-        print(f.read().replace("\n", ""))
+        print(f.read().replace("\n", "| "))
 
 while True:
     user_input = input("\nAdd contact (A)\nSearch contact (S)\nDelete contact (D)\nSee all contacts(R)\nQuit (Q)\nType: ").upper()
