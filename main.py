@@ -2,7 +2,7 @@ from contact_book import ContactBook
 
 
 def store_contact():
-    """It will generate an txt file"""
+    """It will generate a txt file"""
 
     contact = ContactBook(
         name=input("Enter the name of the contact: "),
